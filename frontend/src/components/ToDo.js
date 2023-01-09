@@ -8,8 +8,8 @@ const ToDo = ({ text, updateMode, deleteToDo }) => {
 <div className="todo">
     <div className="text">{text}</div>
     <div className="icons">
-        <BiEdit className="icon" onclick = { updateMode } />
-        <AiFillDelete className="icon" onclick = { deleteToDo } />
+        <BiEdit className="icon" onClick={ updateMode } />
+        <AiFillDelete className="icon" onClick={ deleteToDo } />
     </div>
 </div>
   )
