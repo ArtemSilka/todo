@@ -3,7 +3,7 @@ import React from 'react';
 import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 
-const ToDoComponent = ({ text, updateMode, deleteToDo }) => {
+const ToDo = ({ text, updateMode, deleteToDo }) => {
   return (
 <div className="todo">
     <div className="text">{text}</div>
@@ -15,4 +15,4 @@ const ToDoComponent = ({ text, updateMode, deleteToDo }) => {
   )
 }
 
-export default ToDoComponent
+export default ToDo;

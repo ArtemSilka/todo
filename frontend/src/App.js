@@ -1,6 +1,15 @@
-import ToDoComponent from "./components/ToDoComponent";
+import { useEffect, useState } from "react";
+import ToDo from "./components/ToDo";
+import { getAllToDos } from "./utils/HandleApi";
 
 function App() {
+
+  const [toDo, setToDo ] = useState([]);
+
+  useEffect(() => {
+    getAllToDos(setToDo)
+  }, [])
+
   return (
     <div className="App">
 
@@ -13,7 +22,7 @@ function App() {
 
         <div className="list">
 
-          <ToDoComponent text="Test" />
+          {toDo.map((item) => <ToDo key = { item._id } text = { item.text } />)}
 
         </div>
       </div>
